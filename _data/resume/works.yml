@@ -1,0 +1,57 @@
+- name: Ruby developer
+  company: ePages GmbH
+  place: Hamburg, Germany
+  start_date: May 2015
+  end_date: Act.
+  description:
+
+- name: Ruby developer
+  company: ePages GmbH
+  place: Hamburg, Germany
+  start_date: May 2015
+  end_date: Jan 2017
+  description: I have been developing web platforms as freelance for years.
+               I have developed simple webs made with Wordpress and Moodle,
+               and more complex platforms with Ruby on Rails.
+
+- name: Symfony and iOS developer
+  company: Boletus Network
+  place: Bilbao, Biscay
+  start_date: Jul 2016
+  end_date: Nov 2016
+  description: Boletus is an app that allows users paying via mobile phone on
+               different commerces. I started working there in order to make
+               new functionalities for the API and the commerces control panel,
+               as well as to solve technical problems to businesses and users.
+               Later, I began learning Objective-C to be able to make minor
+               changes in the iOS application and help in the development of the
+               app.
+
+- name: Ruby on Rails developer
+  company: Urbegi Product Research
+  place: Bilbao, Biscay
+  start_date: Mar 2015
+  end_date: Jun 2016
+  description: It was in Urbegi Product Research where I started my Ruby on
+               Rails education, as it was the most used language in the company.
+               I worked on both inherited projects, as well as in others started
+               from the begining with other partners.
+
+- name: Web Developer
+  company: Fundación Urbegi
+  place: Bilbao, Biscay
+  start_date: Jan 2015
+  end_date: Mar 2015
+  description: I started working at Urbegi Foundation while I was studying my
+               Degree in Administration of Computerized Network Systems. During
+               my stay in this company, I made the maintenance and technical
+               service of several Joomla and Moodle platforms, also making new
+               developments for them.
+
+- name: ABAP developer
+  company: Cromion IT Outsourcing Services for Business
+  place: Derio, Biscay
+  start_date: Jun 2012
+  end_date: Jan 2013
+  description: Before the Degree in Computer Applications Development
+               internship, I worked as ABAP developer for a while.

@@ -1,0 +1,53 @@
+- group_name: Main Development
+  icon: code
+  skills:
+  - Ruby on Rails
+  - Ruby
+  - Jekyll
+  - JavaScript
+  - Slim
+  - Haml
+  - HTML
+  - SASS
+  - CSS
+
+- group_name: Secondary Development
+  icon: code
+  skills:
+  - PHP
+  - Symfony
+  - Objective-C
+
+- group_name: Databases
+  icon: database
+  skills:
+  - MySQL
+  - PostgreSQL
+  - MongoDB
+
+- group_name: Software
+  icon: keyboard-o
+  skills:
+  - Git
+  - Atom
+  - Sequel Pro
+  - PGAdmin
+  - Filezilla
+
+- group_name: Others
+  icon: ellipsis-h
+  skills:
+    - Amazon Web Services
+    - Heroku
+    - Mandrill
+    - Mailchimp
+    - Sendgrid
+    - Google Suite
+
+- group_name: Operative Systems
+  icon: laptop
+  skills:
+  - Mac OS
+  - Windows
+  - Ubuntu
+  - Debian
