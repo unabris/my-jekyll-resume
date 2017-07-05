@@ -1,0 +1,47 @@
+.navbar
+  position: fixed
+  width: 100%
+  display: flex
+  align-items: center
+  z-index: 9999
+
+  &--transparent
+    background: $navbar-first-background
+
+    .navigation__link
+      color: $navbar-first-color
+
+  &--white
+    background: $navbar-second-background
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+
+    .navigation__link
+      color: $navbar-second-color
+
+  .navbar-wraper
+    width: 90%
+    max-width: 1200px
+    margin: 0 auto
+    position: relative
+
+    .navigation
+      float: right
+
+      &__list
+        display: flex
+
+      &__item
+        text-transform: uppercase
+        padding: 1em 0
+
+        &:not(:last-child)
+          margin-right: 1.3em
+
+      &__link
+        text-decoration: none
+
+        &--active
+          font-weight: 400
+
+        &:hover
+          color: mix(white, $base-font-color)
