@@ -1,0 +1,47 @@
+.header
+  width: 100%
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background: url('/assets/img/general/background.jpg')
+  background-attachment: fixed
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+
+  &__avatar
+    background: url('/assets/img/general/avatar.jpg') center center
+    background-repeat: no-repeat
+    background-size: cover
+    +size(calc(100vh / 4))
+    border-radius: 100%
+
+  &__title
+    text-transform: uppercase
+    color: white
+    font-weight: 400
+    font-size: 5.2rem
+    line-height: 6rem
+    margin: .6em 0
+    text-align: center
+
+  &__social
+    display: flex
+
+    .social__icon
+      +size(3.2rem)
+      border-radius: 100%
+      border: 1px solid $header-social-icon-color
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 1.3em
+      text-decoration: none
+      color: $header-social-icon-color
+      margin: 0 .2em
+
+      &:hover
+        border: 1px solid $header-social-icon-hover
+        color: $header-social-icon-hover

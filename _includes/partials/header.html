@@ -1,0 +1,13 @@
+<hader class="header" id="header">
+  <div class="header__avatar"></div>
+
+  <h1 class="header__title">{{ site.data.general.name }}</h1>
+
+  <div class="header__social">
+    {% for social in site.data.contact.socials %}
+      <a class="social__icon" href="{{ social.url }}" target="_blank">
+        <i class="fa  fa-fw  fa-{{ social.icon }}"></i>
+      </a>
+    {% endfor %}
+  </div>
+</hader>
