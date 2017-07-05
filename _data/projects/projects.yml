@@ -1,59 +1,3 @@
-- name: Campus Virutal Centro Crímina
-  url: http://campusvirtual.crimina.es/
-  logo: crimina.png
-  background: rgb(12,118,186)
-  categories:
-  - Moodle
-
-- name: Campus Virtual Universidades Jesuitas
-  url: http://campus.unijes.net/
-  logo: unijes.png
-  background:
-  categories:
-  - Moodle
-
-- name: Tuning Academy
-  url: http://tuningacademy.org/
-  logo: tuning-academy.png
-  background: rgb(22,121,189)
-  categories:
-  - Joomla
-
-- name: Tuning China
-  url: http://tuningchina.org/
-  logo: tuning-china.png
-  background: rgb(204,0,0)
-  categories:
-  - Joomla
-
-- name: Tuning Russia
-  url: http://www.tuningrussia.org/
-  logo: tuning-russia.png
-  background: rgb(177,0,54)
-  categories:
-  - Joomla
-
-- name: Tuning America Latina
-  url: http://www.tuningal.org/
-  logo: tuning-america-latina.png
-  background: rgb(147,174,71)
-  categories:
-  - Joomla
-
-- name: Urbegi
-  url: http://urbegi.com/
-  logo: urbegi.png
-  background:
-  categories:
-  - Wordpress
-
-- name: Ambilur
-  url: http://ambilur.com/
-  logo: ambilur.png
-  background:
-  categories:
-  - Wordpress
-
 - name: Emprendimiento 4.0
   url: 	http://emprendimiento40.com/
   logo: emprendimiento-40.png
@@ -75,19 +19,33 @@
   categories:
   - Ruby on Rails
 
-- name: Boletus Website
-  url: http://boletus.com/
-  logo: boletus.png
-  background: rgb(255,117,20)
+- name: ePages developer portal
+  url: https://developer.epages.com/
+  logo: epages.png
+  background:
   categories:
-  - Symfony
+  - Jekyll
 
-- name: Boletus iOS App
-  url: https://itunes.apple.com/es/app/boletus-paga-con-tu-movil/id601363642?mt=8
-  logo: boletus.png
-  background: rgb(255,117,20)
+- name: My resume
+  url: http://unaiabrisketa.com/
+  logo:
+  background:
   categories:
-  - Objective-C
+  - Jekyll
+
+- name: Urbegi
+  url: http://urbegi.com/
+  logo: urbegi.png
+  background:
+  categories:
+  - Wordpress
+
+- name: Ambilur
+  url: http://ambilur.com/
+  logo: ambilur.png
+  background:
+  categories:
+  - Wordpress
 
 - name: JIXT Holding
   url: http://jixtholding.com/
@@ -118,20 +76,6 @@
   categories:
   - Wordpress
 
-- name: My resume
-  url: http://unaiabrisketa.com/
-  logo:
-  background:
-  categories:
-  - Jekyll
-
-- name: That is all I can do
-  url: http://www.thatisallicandoblog.com/
-  logo: that-is-all-i-can-do.png
-  background:
-  categories:
-  - Logo
-
 - name: Nivaria Beach
   url: http://nivariabeach.com/
   logo: nivaria-beach.png
@@ -147,9 +91,65 @@
   - Wordpress
   - Logo
 
-- name: ePages developer portal
-  url: https://developer.epages.com/
-  logo: epages.png
+- name: Campus Virutal Centro Crímina
+  url: http://campusvirtual.crimina.es/
+  logo: crimina.png
+  background: rgb(12,118,186)
+  categories:
+  - Moodle
+
+- name: Campus Virtual Universidades Jesuitas
+  url: http://campus.unijes.net/
+  logo: unijes.png
   background:
   categories:
-  - Jekyll
+  - Moodle
+
+- name: Boletus Website
+  url: http://boletus.com/
+  logo: boletus.png
+  background: rgb(255,117,20)
+  categories:
+  - Symfony
+
+- name: Boletus iOS App
+  url: https://itunes.apple.com/es/app/boletus-paga-con-tu-movil/id601363642?mt=8
+  logo: boletus.png
+  background: rgb(255,117,20)
+  categories:
+  - Objective-C
+
+- name: Tuning Academy
+  url: http://tuningacademy.org/
+  logo: tuning-academy.png
+  background: rgb(22,121,189)
+  categories:
+  - Joomla
+
+- name: Tuning China
+  url: http://tuningchina.org/
+  logo: tuning-china.png
+  background: rgb(204,0,0)
+  categories:
+  - Joomla
+
+- name: Tuning Russia
+  url: http://www.tuningrussia.org/
+  logo: tuning-russia.png
+  background: rgb(177,0,54)
+  categories:
+  - Joomla
+
+- name: Tuning America Latina
+  url: http://www.tuningal.org/
+  logo: tuning-america-latina.png
+  background: rgb(147,174,71)
+  categories:
+  - Joomla
+
+- name: That is all I can do
+  url: http://www.thatisallicandoblog.com/
+  logo: that-is-all-i-can-do.png
+  background:
+  categories:
+  - Logo
