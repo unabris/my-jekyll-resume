@@ -15,6 +15,7 @@ include:
 markdown: kramdown
 
 gems:
+- neat
 - bourbon
 - jekyll-feed
 - jekyll-coffeescript

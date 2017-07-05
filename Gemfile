@@ -8,5 +8,6 @@ group :jekyll_plugins do
   gem 'jekyll-feed'
 end
 
+gem 'neat'
 gem 'bourbon'
 gem 'jekyll-coffeescript'
