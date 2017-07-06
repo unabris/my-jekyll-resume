@@ -14,7 +14,7 @@ include:
 
 markdown: kramdown
 
-gems:
+plugins:
 - neat
 - bourbon
 - jekyll-feed
