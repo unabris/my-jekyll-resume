@@ -1,6 +1,6 @@
-- name: Emprendimiento 4.0
-  url: 	http://emprendimiento40.com/
-  logo: emprendimiento-40.png
+- name: Bizkaia Network
+  url: 	https://bizkaia.network/
+  logo: bizkaia-network.png
   background:
   categories:
   - Ruby on Rails
