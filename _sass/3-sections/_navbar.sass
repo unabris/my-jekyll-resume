@@ -18,7 +18,7 @@
     .navigation__link
       color: $navbar-second-color
 
-  .navbar-wraper
+  &-wraper
     width: 90%
     max-width: 1200px
     margin: 0 auto
@@ -45,3 +45,4 @@
 
         &:hover
           color: mix(white, $base-font-color)
+          +transition(color, .1s, linear, 0)
