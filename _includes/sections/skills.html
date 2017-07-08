@@ -1,0 +1,32 @@
+<section class="section  section--gray" id="skills">
+  <div class="section-wraper">
+
+    <div class="title">
+      <h2 class="title__text">Skills</h2>
+      <div class="title__line"></div>
+    </div>
+
+    <div class="skills">
+
+      {% for group in site.data.resume.skills %}
+        <div class="skills__group">
+
+          <div class="title-small title-small--gray">
+            <div class="title-small__icon">
+              <i class="fa  fa-{{ group.icon }}"></i>
+            </div>
+            <h4 class="title-small__text">{{ group.group_name }}</h4>
+          </div>
+
+          <ul  class="skills__container">
+            {% for skill in group.skills %}
+              <li class="skills__item">{{ skill }}</li>
+            {% endfor %}
+          </ul>
+
+        </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
