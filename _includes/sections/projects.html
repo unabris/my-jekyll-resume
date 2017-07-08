@@ -1,0 +1,42 @@
+<section class="section" id="projects">
+  <div class="section-wraper">
+
+    <div class="title">
+      <h2 class="title__text">Projects</h2>
+      <div class="title__line"></div>
+    </div>
+
+    {% assign categories = site.data.projects.projects | map: 'categories' | join: ',' | split: ',' | uniq %}
+
+    <div class="projects">
+
+      <ul class="projects__categories">
+        <li class="projects__category  projects__category--active" data-filter="">All</li>
+        {% for category in categories %}
+          <li class="projects__category" data-filter=".{{ category | slugify }}">{{ category }}</li>
+        {% endfor %}
+      </ul>
+
+      <div class="projects__container">
+        {% for project in site.data.projects.projects %}
+          <div class="projects__card  {% for category in project.categories %}{{ category | slugify }}  {% endfor %}">
+            <div class="projects__body" {% if project.background %}style="background:{{ project.background }};"{% endif %}>
+              {% if project.url %}
+                <div class="projects__overlay">
+                  <a class="projects__url" href="{{ project.url }}" target="_blank">
+                    <i class="fa  fa-eye"></i>
+                  </a>
+                </div>
+              {% endif %}
+              <img class="projects__image" src="/assets/img/projects/{{ project.logo }}" alt="{{ project.name }} Logo" />
+            </div>
+            <div class="projects__title">{{ project.name }}</div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="projects__pagination"></div>
+
+    </div>
+  </div>
+</section>
