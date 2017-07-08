@@ -1,0 +1,42 @@
+.title-small
+  display: flex
+  align-items: center
+  margin: 0 0 2em 0
+  position: relative
+
+  &--gray
+
+    .title-small__icon,
+    .title-small__text
+      background: $section-dark
+
+  &::after
+    content: ""
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 0
+    width: 100%
+    border-bottom: 2px solid $small-title-border
+    z-index: 0
+
+  &__icon
+    z-index: 1
+    +size(4.2rem)
+    border-radius: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 2px solid $small-title-border
+    box-sizing: border-box
+
+    i.fa
+      font-size: 1.8rem
+      color: $small-title-icon
+
+  &__text
+    padding: 0 .6em
+    color: $small-title-color
+    text-transform: uppercase
+    font-weight: 400
+    z-index: 1
