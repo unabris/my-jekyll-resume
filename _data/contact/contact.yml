@@ -1,0 +1,15 @@
+- value: info@unaiabrisketa.com
+  icon: envelope
+  link: mailto:info@unaiabrisketa.com
+
+- value: +34 615 712 753
+  icon: phone
+  link: tel:+34 615 712 753
+
+- value: info@unaiabrisketa.com
+  icon: skype
+  link:
+
+- value: Hamburg, Germany
+  icon: map-marker
+  link:
