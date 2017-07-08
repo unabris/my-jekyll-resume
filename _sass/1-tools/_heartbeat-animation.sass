@@ -1,0 +1,35 @@
+@mixin heartbeat-animation
+  +prefixer(animation-name, heartbeat, webkit moz o spec)
+  +prefixer(animation, heartbeat 1.5s infinite, webkit moz o spec)
+
+@-webkit-keyframes heartbeat
+  0%
+    -webkit-transform: scale(1)
+  50%
+    -webkit-transform: scale(1.15)
+  100%
+    -webkit-transform: scale(1)
+
+@-moz-keyframes heartbeat
+  0%
+    -moz-transform: scale(1)
+  50%
+    -moz-transform: scale(1.15)
+  100%
+    -moz-transform: scale(1)
+
+@-o-keyframes heartbeat
+  0%
+    -o-transform: scale(1)
+  50%
+    -o-transform: scale(1.15)
+  100%
+    -o-transform: scale(1)
+
+@keyframes heartbeat
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.15)
+  100%
+    transform: scale(1)
