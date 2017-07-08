@@ -1,0 +1,43 @@
+#{$all-text-inputs}
+  font-family: $base-font-family
+  line-height: $base-line-height
+  color: $base-font-color
+  letter-spacing: .05em
+  font-size: 1.6rem
+  font-weight: 400
+  outline: none
+  border: 2px solid $border-color
+  box-sizing: border-box
+  padding: .8em 1.4em
+  border-radius: 4px
+  width: 100%
+  max-width: 100%
+  min-width: 100%
+  background: white
+
+textarea
+  min-height: 250px
+
+button
+  font-family: $base-font-family
+  line-height: $base-line-height
+  color: white
+  letter-spacing: .05em
+  font-size: 1.6rem
+  font-weight: 400
+  outline: none
+  box-sizing: border-box
+  padding: .8em 1.4em
+  border-radius: 4px
+  background: $base-font-color
+  width: 50%
+  cursor: pointer
+  border: none
+  float: right
+
+  &:hover
+    background: darken($base-font-color, 10)
+    color: white
+
+#{$all-text-inputs-focus}
+  border-color: $base-font-color
