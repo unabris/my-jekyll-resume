@@ -1,0 +1,134 @@
+.experience
+  display: flex
+  flex-direction: column
+  position: relative
+
+  &::before
+    content: ""
+    height: 95%
+    +position(absolute, 0 null null 50%)
+    transform: translateX(-50%)
+    border-left: 2px solid $border-color
+    z-index: 0
+
+  &__icon
+    +size(8.6rem)
+    z-index: 1
+    background: $section-light
+    color: $icon-color
+    border-radius: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 2px solid $border-color
+    box-sizing: border-box
+    margin: 0 auto 2rem
+
+    i.fa
+      font-size: 4rem
+
+  &__container
+    width: calc(50% + 3.6rem)
+    margin-bottom: 2rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &:last-child
+      margin-bottom: 0
+
+    &--left
+      flex-direction: row-reverse
+      margin-right: calc(50% - 3.6rem)
+
+      .experience__box
+
+        &::before
+          +triangle(24px, $border-color, right)
+          right: -13px
+
+        &::after
+          +triangle(20px, $section-light, right)
+          right: -10px
+
+    &--right
+      flex-direction: row
+      margin-left: calc(50% - 3.6rem)
+
+      .experience__box
+
+        &::before
+          +triangle(24px, $border-color, left)
+          left: -13px
+
+        &::after
+          +triangle(20px, $section-light, left)
+          left: -10px
+
+  &__date
+    +size(7.2rem)
+    background: $main-color
+    box-sizing: border-box
+    border-radius: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    color: $experience-date-color
+    border: 2px solid $section-light
+    z-index: 1
+
+    &.active
+      background: $experience-active
+
+    span
+      font-size: 1rem
+
+      &:first-child
+        margin-bottom: .3em
+
+  &__box
+    width: calc(100% - 6.8rem - 2rem)
+    box-sizing: border-box
+    padding: 2.6rem 3.2rem
+    border: 2px solid $border-color
+    border-radius: 4px
+    position: relative
+
+    &::before,
+    &::after
+      content: ""
+      +position(absolute, 50% null null null)
+      transform: translateY(-50%)
+
+  &__name
+    font-weight: 400
+    text-align: center
+    margin-bottom: .1em
+
+  &__place
+    letter-spacing: 1px
+    text-align: center
+    color: $base-light-font-color
+
+  &__description
+    margin-top: 1em
+    display: none
+
+  .expetience__show
+    +size(2.4rem)
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    border: 2px solid $border-color
+    border-radius: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    background: $section-light
+    bottom: -1.4rem
+    cursor: pointer
+
+    i.fa
+      font-size: 1.6rem
+      color: $icon-color

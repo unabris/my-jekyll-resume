@@ -1,0 +1,75 @@
+<section class="section" id="experience">
+  <div class="section-wraper">
+
+    <div class="title">
+      <h2 class="title__text">Experience</h2>
+      <div class="title__line"></div>
+    </div>
+
+    <div class="experience">
+
+      <div class="experience__icon">
+        <i class="fa  fa-briefcase"></i>
+      </div>
+
+      {% assign i = 0 %}
+
+      {% for work in site.data.resume.works %}
+        {% assign align = i | modulo: 2 %}
+        <div class="experience__container  {% if align == 0 %}experience__container--left{% else %}experience__container--right{% endif %}">
+
+          <div class="experience__date  {% if work.end_date == null %}active{% endif %}">
+            <span>{{ work.start_date | date: "%b %Y" }}</span>
+            <span>{% if work.end_date == null %}Act.{% else %}{{ work.end_date | date: "%b %Y" }}{% endif %}</span>
+          </div>
+
+          <div class="experience__box">
+            <h3 class="experience__name">{{ work.name }}</h3>
+            <h4 class="experience__place">{{ work.company }} | {{ work.place }}</h4>
+            {% if work.description %}
+              <div class="experience__description">{{ work.description | markdownify }}</div>
+            {% endif %}
+            {% if work.description %}
+              <div class="expetience__show">
+                <i class="fa  fa-fw  fa-arrow-down"></i>
+              </div>
+            {% endif %}
+          </div>
+
+        </div>
+        {% assign i = i | plus: 1 %}
+      {% endfor %}
+
+      <div class="experience__icon">
+        <i class="fa  fa-graduation-cap"></i>
+      </div>
+
+      {% for study in site.data.resume.studies %}
+        {% assign align = i | modulo: 2 %}
+        <div class="experience__container  {% if align == 0 %}experience__container--left{% else %}experience__container--right{% endif %}">
+
+          <div class="experience__date">
+            <span>{{ study.start_date | date: "%b %Y" }}</span>
+            <span>{{ study.end_date | date: "%b %Y" }}</span>
+          </div>
+
+          <div class="experience__box">
+            <h3 class="experience__name">{{ study.name }}</h3>
+            <h4 class="experience__place">{{ study.company }} | {{ study.place }}</h4>
+            {% if study.description %}
+              <div class="experience__description">{{ study.description | markdownify }}</div>
+            {% endif %}
+            {% if study.description %}
+              <div class="expetience__show">
+                <i class="fa  fa-fw  fa-arrow-down"></i>
+              </div>
+            {% endif %}
+          </div>
+
+        </div>
+        {% assign i = i | plus: 1 %}
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
