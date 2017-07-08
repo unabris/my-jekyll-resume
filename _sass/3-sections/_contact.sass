@@ -1,0 +1,53 @@
+.contact
+  +grid-collapse
+  +grid-container
+
+  .element
+    +grid-column(6)
+
+  .form
+    margin: 0 2.4rem
+
+    &__input
+      margin-bottom: 20px
+
+    &__message
+      background: $form-message-background
+      margin-bottom: 20px
+      box-sizing: border-box
+      padding: .8em 1.4em
+      border-radius: 4px
+      font-weight: 400
+      cursor: pointer
+      display: none
+
+    &__success
+      border: 2px solid $form-message-success
+      color: $form-message-success
+
+    &__error
+      border: 2px solid $form-message-error
+      color: $form-message-error
+
+  &__items
+    margin: 0 2.4rem
+
+  &__item
+    display: flex
+    align-items: center
+
+    &:not(:last-child)
+      margin-bottom: .8em
+
+    i.fa
+      +size(4.2rem)
+      background: $main-color
+      color: white
+      border-radius: 100%
+      text-align: center
+      line-height: 4.2rem
+      font-size: 1.3em
+      margin-right: .8em
+
+    a
+      color: $base-font-color

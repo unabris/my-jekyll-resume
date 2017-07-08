@@ -1,0 +1,66 @@
+<section class="section  section--gray" id="contact">
+  <div class="section-wraper">
+
+    <div class="title">
+      <h2 class="title__text">Contact</h2>
+      <div class="title__line"></div>
+    </div>
+
+    <div class="contact">
+      <div class="element">
+
+        <div class="title-small title-small--gray">
+          <div class="title-small__icon">
+            <i class="fa  fa-address-book"></i>
+          </div>
+          <h4 class="title-small__text">Let's get in touch</h4>
+        </div>
+
+        <div class="contact__items">
+          <ul>
+            {% for contact in site.data.contact.contact %}
+              <li class="contact__item">
+                <i class="fa  fa-{{ contact.icon }}"></i>
+                {% if contact.link %}
+                  <a href="{{ contact.link }}">{{ contact.value }}</a>
+                {% else %}
+                  {{ contact.value }}
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="element">
+
+        <div class="title-small title-small--gray">
+          <div class="title-small__icon">
+            <i class="fa  fa-paper-plane"></i>
+          </div>
+          <h4 class="title-small__text">Drop me a line</h4>
+        </div>
+
+        <div class="form">
+          <form id="contact_form" action="https://formspree.io/{{ site.data.general.form_email }}" method="POST">
+            <div class="form__message  form__success">
+              Thank you for your message
+            </div>
+            <div class="form__message  form__error">
+              Sorry, an error occurred
+            </div>
+            <input class="form__input" type="text" name="Name" placeholder="Name*" required />
+            <input class="form__input" type="email" name="E-mail" placeholder="Email*" required />
+            <textarea class="form__input" name="Message" placeholder="Message*" required></textarea>
+            <button class="form__submit  g-recaptcha"
+                    data-sitekey="6LeaZSgUAAAAAMbtU5akPb--5eUs-uaXXJ88B9kd"
+                    data-callback="onSubmit">Submit</button>
+            <!-- <input class="form__submit" type="submit" value="Send" /> -->
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
