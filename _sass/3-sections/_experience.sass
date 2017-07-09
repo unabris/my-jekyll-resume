@@ -4,12 +4,13 @@
   position: relative
 
   &::before
-    content: ""
-    height: 95%
-    +position(absolute, 0 null null 50%)
-    transform: translateX(-50%)
-    border-left: 2px solid $border-color
-    z-index: 0
+    +grid-media($grid-medium)
+      content: ""
+      height: 95%
+      +position(absolute, 0 null null 50%)
+      transform: translateX(-50%)
+      border-left: 2px solid $border-color
+      z-index: 0
 
   &__icon
     +size(8.6rem)
@@ -22,48 +23,61 @@
     justify-content: center
     border: 2px solid $border-color
     box-sizing: border-box
-    margin: 0 auto 2rem
+    margin: 0 auto 3rem
+
+    +grid-media($grid-medium)
+      margin-bottom: 2rem
 
     i.fa
       font-size: 4rem
 
   &__container
-    width: calc(50% + 3.6rem)
-    margin-bottom: 2rem
+    width: 100%
+    margin-bottom: 4rem
     display: flex
     align-items: center
     justify-content: space-between
+    flex-direction: column
+
+    +grid-media($grid-medium)
+      margin-bottom: 2rem
 
     &:last-child
       margin-bottom: 0
 
     &--left
-      flex-direction: row-reverse
-      margin-right: calc(50% - 3.6rem)
 
-      .experience__box
+      +grid-media($grid-medium)
+        width: calc(50% + 3.6rem)
+        flex-direction: row-reverse
+        margin-right: calc(50% - 3.6rem)
 
-        &::before
-          +triangle(24px, $border-color, right)
-          right: -13px
+        .experience__box
 
-        &::after
-          +triangle(20px, $section-light, right)
-          right: -10px
+          // &::before
+          //   +triangle(24px, $border-color, right)
+          //   right: -13px
+          //
+          // &::after
+          //   +triangle(20px, $section-light, right)
+          //   right: -10px
 
     &--right
-      flex-direction: row
-      margin-left: calc(50% - 3.6rem)
 
-      .experience__box
+      +grid-media($grid-medium)
+        width: calc(50% + 3.6rem)
+        flex-direction: row
+        margin-left: calc(50% - 3.6rem)
 
-        &::before
-          +triangle(24px, $border-color, left)
-          left: -13px
+        .experience__box
 
-        &::after
-          +triangle(20px, $section-light, left)
-          left: -10px
+          // &::before
+          //   +triangle(24px, $border-color, left)
+          //   left: -13px
+          //
+          // &::after
+          //   +triangle(20px, $section-light, left)
+          //   left: -10px
 
   &__date
     +size(7.2rem)
@@ -88,18 +102,22 @@
         margin-bottom: .3em
 
   &__box
-    width: calc(100% - 6.8rem - 2rem)
+    width: 100%
     box-sizing: border-box
     padding: 2.6rem 3.2rem
     border: 2px solid $border-color
     border-radius: 4px
     position: relative
+    margin-top: 2rem
 
-    &::before,
-    &::after
-      content: ""
-      +position(absolute, 50% null null null)
-      transform: translateY(-50%)
+    +grid-media($grid-medium)
+      width: calc(100% - 6.8rem - 2rem)
+
+    // &::before,
+    // &::after
+    //   content: ""
+    //   +position(absolute, 50% null null null)
+    //   transform: translateY(-50%)
 
   &__name
     font-weight: 400
