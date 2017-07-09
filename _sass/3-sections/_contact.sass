@@ -3,7 +3,16 @@
   +grid-container
 
   .element
-    +grid-column(6)
+    +grid-column
+
+    +grid-media($grid-medium)
+      +grid-column(6)
+
+    &:not(:last-child)
+      margin-bottom: 6.4rem
+
+      +grid-media($grid-medium)
+        margin-bottom: 0
 
   .form
     margin: 0 2.4rem
