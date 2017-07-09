@@ -5,14 +5,17 @@
   flex-wrap: wrap
 
   &__group
-    +grid-column(6)
+    +grid-column
     margin-bottom: 3em
 
-    &:nth-last-child(-n + 2)
-      margin-bottom: 0
+    +grid-media($grid-medium)
+      +grid-column(6)
 
-      .skills__container
+      &:nth-last-child(-n + 2)
         margin-bottom: -1.2em
+
+    &:last-child
+      margin-bottom: -1.2em
 
   &__container
     +grid-container
