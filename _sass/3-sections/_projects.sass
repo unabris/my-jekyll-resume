@@ -13,11 +13,8 @@
     padding: .4em 1em
     font-size: 1.4rem
     cursor: pointer
-    margin-bottom: 1em
+    +margin(null .5em 1em .5em)
     color: $base-light-font-color
-
-    &:not(:last-child)
-      margin-right: 1em
 
     &--active
       border: 1px solid $base-font-color
@@ -34,10 +31,16 @@
     +grid-container
 
   &__card
-    +grid-column(4, $projects-grid)
+    +grid-column(12, $projects-grid)
     border: 2px solid lightgray
     margin-bottom: 20px
     box-sizing: border-box
+
+    +grid-media($grid-small)
+      +grid-column(6, $projects-grid)
+
+    +grid-media($grid-large)
+      +grid-column(4, $projects-grid)
 
   &__body
     height: 16rem
