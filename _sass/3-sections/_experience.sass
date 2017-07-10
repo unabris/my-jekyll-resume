@@ -54,13 +54,13 @@
 
         .experience__box
 
-          // &::before
-          //   +triangle(24px, $border-color, right)
-          //   right: -13px
-          //
-          // &::after
-          //   +triangle(20px, $section-light, right)
-          //   right: -10px
+          &::before
+            +triangle(24px, $border-color, right)
+            right: -13px
+
+          &::after
+            +triangle(20px, $section-light, right)
+            right: -10px
 
     &--right
 
@@ -71,13 +71,13 @@
 
         .experience__box
 
-          // &::before
-          //   +triangle(24px, $border-color, left)
-          //   left: -13px
-          //
-          // &::after
-          //   +triangle(20px, $section-light, left)
-          //   left: -10px
+          &::before
+            +triangle(24px, $border-color, left)
+            left: -13px
+
+          &::after
+            +triangle(20px, $section-light, left)
+            left: -10px
 
   &__date
     +size(7.2rem)
@@ -114,11 +114,39 @@
       width: calc(100% - 6.8rem - 2rem)
       margin-top: 0
 
-    // &::before,
-    // &::after
-    //   content: ""
-    //   +position(absolute, 50% null null null)
-    //   transform: translateY(-50%)
+    &::before,
+    &::after
+      content: ""
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      width: 0
+      height: 0
+
+      +grid-media($grid-medium)
+        left: inherit
+
+    &::before
+      top: -14px
+      border-left: 12px solid transparent
+      border-right: 12px solid transparent
+      border-bottom: 12px solid $border-color
+
+      +grid-media($grid-medium)
+        top: 50%
+        transform: translateY(-50%)
+        border: 0
+
+    &::after
+      top: -11px
+      border-left: 11px solid transparent
+      border-right: 11px solid transparent
+      border-bottom: 11px solid $section-light
+
+      +grid-media($grid-medium)
+        top: 50%
+        transform: translateY(-50%)
+        border: 0
 
   &__name
     font-weight: 400
