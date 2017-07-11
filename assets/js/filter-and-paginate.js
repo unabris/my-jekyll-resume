@@ -35,7 +35,13 @@ function filterAndPaginate(container, options) {
     var filter = getFilterString(clicked),
         items = container.children(target + filter),
         itemNumber = items.length,
-        itemsPerPage = 6;
+        itemsPerPage = 6,
+        displayedPages;
+
+    if ($(window).width() < 481) {
+      itemsPerPage = 3;
+      displayedPages = 1;
+    }
 
     items.slice(itemsPerPage).hide();
 
@@ -44,6 +50,7 @@ function filterAndPaginate(container, options) {
         itemsOnPage: itemsPerPage,
         prevText: '❮',
         nextText: '❯',
+        displayedPages: displayedPages,
         onPageClick: function(pageNumber) {
           var showFrom = itemsPerPage * (pageNumber - 1);
           var showTo = showFrom + itemsPerPage;
