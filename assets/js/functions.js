@@ -147,10 +147,6 @@ $(function() {
     $(this).slideUp();
   });
 
-  function onSubmit(token) {
-    document.getElementById("contact_form").submit();
-  }
-
   function clearForm() {
     $('#contact_form input[type=text]').val('');
     $('#contact_form input[type=email]').val('');
