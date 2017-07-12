@@ -7,6 +7,7 @@ twitter_username: unabris
 github_username:  unabris
 
 sass:
+  sass_dir: _sass
   style: compressed
 
 include:
@@ -18,8 +19,8 @@ plugins:
 - neat
 - bourbon
 - jekyll-feed
-- jekyll-coffeescript
 
 exclude:
 - Gemfile
 - Gemfile.lock
+- vendor
