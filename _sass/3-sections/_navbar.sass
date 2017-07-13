@@ -8,34 +8,64 @@
   &--transparent
     background: $navbar-first-background
 
-    .navigation__link
+    .navigation__button
       color: $navbar-first-color
+
+    .navigation__link
+      color: $navbar-second-color
+
+      +grid-media($grid-medium)
+        color: $navbar-first-color
 
   &--white
     background: $navbar-second-background
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
 
-    .navigation__link
+    .navigation__link,
+    .navigation__button
       color: $navbar-second-color
 
   &-wraper
     width: 90%
     max-width: 1200px
     margin: 0 auto
-    position: relative
 
     .navigation
-      float: right
+      $navigation-width: 70%
+      +position(absolute, 0 null null (-$navigation-width))
+      background: $navbar-second-background
+      height: 100vh
+      z-index: 1
+      width: $navigation-width
+
+      &--open
+        left: 0
+        +transition(left, .2s, linear, 0)
+
+      +grid-media($grid-medium)
+        background: inherit
+        height: inherit
+        position: relative
+        float: right
+        width: auto
+        left: auto
 
       &__list
         display: flex
+        flex-direction: column
+
+        +grid-media($grid-medium)
+          flex-direction: row
 
       &__item
         text-transform: uppercase
-        padding: 1em 0
+        +padding(1em null 1em 2em)
 
-        &:not(:last-child)
-          margin-right: 1.6em
+        +grid-media($grid-medium)
+          padding: 1em 0
+
+          &:not(:last-child)
+            margin-right: 1.6em
 
       &__link
         text-decoration: none
@@ -46,3 +76,20 @@
         &:hover
           color: mix(white, $base-font-color)
           +transition(color, .1s, linear, 0)
+
+      &__button
+        padding: 1em 0
+        float: right
+
+        +grid-media($grid-medium)
+          display: none
+
+      &__background
+        +position(absolute, 0 null null 0)
+        width: 100vw
+        height: 100vh
+        background: rgba(0, 0, 0, .4)
+        display: none
+
+        +grid-media($grid-medium)
+          display: none

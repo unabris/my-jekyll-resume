@@ -49,8 +49,12 @@ $(function() {
   $('.animate__scroll[href^="#"]').click(function(e) {
     var target = $(this).attr('href');
     var navbar = $('.navbar').outerHeight();
+
     e.preventDefault();
+
     if (target.length) {
+      hideMobileNavigation();
+
       $('html,body').animate({
         scrollTop: $(target).offset().top - navbar
       }, 1000);
@@ -160,5 +164,22 @@ $(function() {
         $('input[name=' + name + ']').val(text);
       });
     }
+  }
+
+  // Mobile menu
+  $('.navigation__button').click(function() {
+    $('.navigation__background').show();
+    $('.navigation').addClass('navigation--open');
+    $(document.documentElement).css('overflow-y', 'hidden');
+
+    $('.navigation__background').click(function() {
+      hideMobileNavigation();
+    });
+  });
+
+  function hideMobileNavigation() {
+    $('.navigation__background').hide();
+    $('.navigation').removeClass('navigation--open');
+    $(document.documentElement).css('overflow-y', 'auto');
   }
 });
