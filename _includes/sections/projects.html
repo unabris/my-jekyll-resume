@@ -28,7 +28,11 @@
                   </a>
                 </div>
               {% endif %}
-              <img class="projects__image" src="/assets/img/projects/{{ project.logo }}" alt="{{ project.name }} Logo" />
+              {% if project.logo %}
+                <img class="projects__image" src="/assets/img/projects/{{ project.logo }}" alt="{{ project.name }} Logo" />
+              {% else %}
+                <img class="projects__image" src="/assets/img/projects/missing.png" alt="{{ project.name }} Logo Missing" />
+              {% endif %}
             </div>
             <div class="projects__title">{{ project.name }}</div>
           </div>
