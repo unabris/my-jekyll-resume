@@ -20,7 +20,7 @@
 
           <div class="experience__date  {% if work.end_date == null %}active{% endif %}">
             <span>{{ work.start_date | date: "%b %Y" }}</span>
-            <span>{% if work.end_date == null %}Act.{% else %}{{ work.end_date | date: "%b %Y" }}{% endif %}</span>
+            <span>{% if work.end_date == null %}Currently{% else %}{{ work.end_date | date: "%b %Y" }}{% endif %}</span>
           </div>
 
           <div class="experience__box">
