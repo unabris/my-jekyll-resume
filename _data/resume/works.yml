@@ -1,57 +1,71 @@
-- name: Ruby developer
+- name: Tools developer
   company: ePages GmbH
   place: Hamburg, Germany
-  start_date: 2015-05-01
+  start_date: 2017-01-01
   end_date:
-  description:
+  description: <p>I decided to move to Hamburg to join one of the
+               most important eCommerce companies, ePages.</p>
+               <p>Once here, I became part of the Internal Tools Team.</p>
+               <p>On this team we deal with different projects made on different
+               technologies such as the ePages Developer Portal, the ePages
+               Wordpress Plugin, our Sales Analytics App and other internal
+               tools.</p>
 
 - name: Freelance developer
   company: Freelance
   place: Portugalete, Biscay
   start_date: 2015-05-01
-  end_date: 2017-01-01
-  description: I have been developing web platforms as freelance for years.
-               I have developed simple webs made with Wordpress and Moodle,
-               and more complex platforms with Ruby on Rails.
+  end_date:
+  description: <p>I have been developing web platforms as freelance for
+               years.</p>
+               <p>I have developed simple webs made with Wordpress and Moodle,
+               and more complex platforms using Ruby on Rails.</p>
+               <p>Currently and since I started working with Jekyll, I have also
+               developed some open source Jekyll plugins on my free time.</p>
 
 - name: Symfony and iOS developer
   company: Boletus Network
   place: Bilbao, Biscay
   start_date: 2016-07-01
   end_date: 2016-11-01
-  description: Boletus is an app that allows users paying via mobile phone on
-               different commerces. I started working there in order to make
-               new functionalities for the API and the commerces control panel,
-               as well as to solve technical problems to businesses and users.
-               Later, I began learning Objective-C to be able to make minor
-               changes in the iOS application and help in the development of the
-               app.
+  description: <p>Boletus is an app that allows users paying via mobile phone on
+               different commerces.</p>
+               <p>I started working there in order to develop new
+               functionalities for the API and the commerces control panel, as
+               well as to solve technical problems to businesses and users.</p>
+               <p>Later, I learned Objective-C and helpep on the development of
+               the iOS application.</p>
 
 - name: Ruby on Rails developer
   company: Urbegi Product Research
   place: Bilbao, Biscay
   start_date: 2015-03-01
   end_date: 2016-06-01
-  description: It was in Urbegi Product Research where I started my Ruby on
-               Rails education, as it was the most used language in the company.
-               I worked on both inherited projects, as well as in others started
-               from the begining with other partners.
+  description: <p>When I was going to start my internship, the company decided
+               to move me to Urbegi Product Research, the research and
+               development department.</p>
+               <p>It was in Urbegi Product Research where I started my Ruby on
+               Rails education, as it was the most used language in the
+               company.</p>
+               <p>I worked on both inherited projects, as well as in other
+               platforms started from the begining with other partners.</p>
+               <p>I also developed some Wordpress sites.</p>
 
 - name: Web Developer
   company: Fundación Urbegi
   place: Bilbao, Biscay
   start_date: 2015-01-01
   end_date: 2015-03-01
-  description: I started working at Urbegi Foundation while I was studying my
-               Degree in Administration of Computerized Network Systems. During
-               my stay in this company, I made the maintenance and technical
-               service of several Joomla and Moodle platforms, also making new
-               developments for them.
+  description: <p>I started working at Urbegi Foundation while I was studying my
+               Higher Degree in Administration of Computerized Network
+               Systems.</p>
+               <p>During my stay in this company, I made the maintenance and
+               technical service of several Joomla and Moodle platforms as well
+               as new improvements for them.</p>
 
 - name: ABAP developer
   company: Cromion IT Outsourcing Services for Business
   place: Derio, Biscay
   start_date: 2012-06-01
   end_date: 2013-01-01
-  description: Before the Degree in Computer Applications Development
-               internship, I worked as ABAP developer for a while.
+  description:
