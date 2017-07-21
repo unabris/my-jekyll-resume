@@ -8,27 +8,42 @@
   &--transparent
     background: $navbar-first-background
 
-    .navigation__button
-      color: $navbar-first-color
+    .navigation
 
-    .navigation__link
-      color: $navbar-second-color
-
-      +grid-media($grid-medium)
+      &__button
         color: $navbar-first-color
+
+      &__link
+        color: $navbar-second-color
+
+        +grid-media($grid-medium)
+          color: $navbar-first-color
+
+      &__icon
+        background: $icon-first-background
+        color: $icon-first-color
 
   &--white
     background: $navbar-second-background
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
 
-    .navigation__link,
-    .navigation__button
-      color: $navbar-second-color
+    .navigation
+
+      &__link,
+      &__button
+        color: $navbar-second-color
+
+      &__icon
+        background: $icon-second-background
+        color: $icon-second-color
 
   &-wraper
     width: 90%
     max-width: 1200px
     margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-between
 
     .navigation
       $navigation-width: 70%
@@ -49,6 +64,16 @@
         float: right
         width: auto
         left: auto
+
+      &__icon
+        float: left
+        +size(4rem)
+        border-radius: 100%
+        line-height: 4rem
+        text-align: center
+        text-decoration: none
+        font-weight: 400
+        font-size: 2.5rem
 
       &__list
         display: flex
