@@ -1,8 +1,5 @@
 email: info@unaiabrisketa.com
-description: ''
-baseurl: ''
 url: 'http://localhost'
-port: 3000
 twitter_username: unabris
 github_username:  unabris
 
@@ -18,9 +15,9 @@ markdown: kramdown
 plugins:
 - neat
 - bourbon
-- jekyll-feed
 
 exclude:
 - Gemfile
 - Gemfile.lock
 - vendor
+- Procfile
