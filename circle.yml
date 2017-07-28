@@ -2,6 +2,12 @@ machine:
   ruby:
     version: 2.4.1
 
+general:
+  branches:
+    only:
+    - master
+    - develop
+
 dependencies:
   pre:
   - gem install bundler
@@ -13,10 +19,6 @@ test:
   - bundle exec rake test
 
 deployment:
-  staging:
-    branch: develop
-    heroku:
-      appname: ${HEROKU_REPOSITORY}
   production:
     branch: master
     commands:
