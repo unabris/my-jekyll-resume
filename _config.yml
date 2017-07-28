@@ -1,5 +1,5 @@
 email: info@unaiabrisketa.com
-url: 'http://localhost'
+url: 'http://www.unaiabrisketa.com'
 twitter_username: unabris
 github_username:  unabris
 
@@ -21,3 +21,5 @@ exclude:
 - Gemfile.lock
 - vendor
 - Procfile
+- circle.yml
+- Rakefile
