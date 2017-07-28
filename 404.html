@@ -1,0 +1,38 @@
+---
+layout: null
+permalink: /404.html
+---
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Unai Abrisketa" />
+
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png" sizes="32x32">
+
+    <title>404 Page not found - {{ site.data.general.name }}</title>
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" />
+  </head>
+
+  <body class="error-page">
+    <div class="error-page__icon">¯\_(ツ)_/¯</div>
+
+    <h2 class="error-page__code">404</h2>
+
+    <h3 class="error-page__description">Page not found</h3>
+
+    <div class="social">
+      {% for social in site.data.contact.socials %}
+        <a class="social__icon" href="{{ social.url }}" target="_blank">
+          <i class="fa  fa-{{ social.icon }}"></i>
+        </a>
+      {% endfor %}
+    </div>
+  </body>
+</html>
