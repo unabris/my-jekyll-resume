@@ -1,6 +1,6 @@
 .arrow__up
-  +size(5rem)
-  +position(fixed, null .5em .5em null)
+  +size(4rem)
+  +position(fixed, null .3em .3em null)
   display: flex
   align-items: center
   justify-content: center
@@ -11,6 +11,10 @@
   color: $arrow-color
   text-decoration: none
   display: none
+
+  +grid-media($grid-small)
+    +size(5rem)
+    +position(fixed, null .5em .5em null)
 
   &:hover
     background: $arrow-background-hover
