@@ -1,6 +1,6 @@
 .error-page
   width: 100vw
-  height: 100vh
+  height: 100%
   background: $error-page-background
   color: $error-page-color
   display: flex
@@ -40,7 +40,10 @@
       text-decoration: none
 
       &:not(:last-child)
-        margin-right: .8em
+        margin-right: .4em
+
+        +grid-media($grid-small)
+          margin-right: .6em
 
       &:hover
         +transition(all, .2s, linear, 0)
