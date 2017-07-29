@@ -124,12 +124,24 @@ $(function() {
   $('#contact_form').submit(function(event) {
     event.preventDefault();
 
-    var sendButton = $(this).siblings('input[type=submit]')
+    if(grecaptcha.getResponse() == "") {
+      alert('Are you a robot?');
+    } else {
+      submitForm(this);
+    }
+  });
+
+  $('#contact_form  .form__message').click(function() {
+    $(this).slideUp();
+  });
+
+  function submitForm(element) {
+    var sendButton = $(element).siblings('input[type=submit]');
 
     $.ajax({
-      url: $(this).attr('action'),
+      url: $(element).attr('action'),
       method: "POST",
-      data: $(this).serializeArray(),
+      data: $(element).serializeArray(),
       dataType: "json",
       beforeSend: function() {
         sendButton.prop('disabled', true);
@@ -145,11 +157,7 @@ $(function() {
         sendButton.prop('disabled', false);
       }
     });
-  });
-
-  $('#contact_form  .form__message').click(function() {
-    $(this).slideUp();
-  });
+  }
 
   function clearForm() {
     $('#contact_form input[type=text]').val('');

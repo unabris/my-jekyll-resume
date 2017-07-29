@@ -3,6 +3,8 @@ url: 'http://www.unaiabrisketa.com'
 twitter_username: unabris
 github_username:  unabris
 
+recaptcha_key: 6LfnVRUUAAAAALZCu3PVN5sADJLGOWpdNxMgx9eT
+
 sass:
   sass_dir: _sass
   style: compressed
