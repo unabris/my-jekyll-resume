@@ -11,7 +11,7 @@
     <div class="projects">
 
       <ul class="projects__categories">
-        <li class="projects__category  projects__category--active" data-filter="">All</li>
+        <li class="projects__category  projects__category--active" data-filter="all">All</li>
         {% for category in categories %}
           <li class="projects__category" data-filter=".{{ category | slugify }}">{{ category }}</li>
         {% endfor %}
@@ -19,7 +19,7 @@
 
       <div class="projects__container">
         {% for project in site.data.projects.projects %}
-          <div class="projects__card  {% for category in project.categories %}{{ category | slugify }}  {% endfor %}">
+          <div class="projects__card  mix  {% for category in project.categories %}{{ category | slugify }}  {% endfor %}">
             <div class="projects__body" {% if project.background %}style="background:{{ project.background }};"{% endif %}>
               {% if project.url %}
                 <div class="projects__overlay">
@@ -39,7 +39,7 @@
         {% endfor %}
       </div>
 
-      <div class="projects__pagination"></div>
+      <div class="mixitup-page-list"></div>
 
     </div>
   </div>

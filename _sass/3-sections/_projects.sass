@@ -18,8 +18,8 @@
 
     &--active
       border: 1px solid $base-font-color
-      background: $base-font-color
-      color: white
+      background: $base-font-color !important
+      color: white !important
 
     &:not(.projects__category--active):hover
       border: 1px solid $base-font-color
@@ -92,29 +92,30 @@
     +ellipsis
     display: block
 
-  &__pagination
+.mixitup
+
+  &-page-list
     margin-top: 20px
+    display: flex
+    justify-content: center
+    width: 100%
+    background: $pag-item-background
+    color: $pag-item-color
 
-    ul
-      display: flex
-      justify-content: center
+  &-control
+    +size(3.6rem)
+    line-height: 3.6rem
+    text-align: center
+    font-weight: 400
+    border-radius: 4px
+    cursor: pointer
 
-      li
-        +size(3.6rem)
-        line-height: 3.6rem
-        text-align: center
-        font-weight: 400
-        border-radius: 4px
+    &-active
+      background: $pag-active-background
+      color: $pag-active-color
+      cursor: auto
 
-        &.active
-          background: $pag-active-background
-          color: $pag-active-color
-
-        &.disabled
-          background: $pag-disabled-background
-          color: $pag-disabled-color
-
-        a
-          background: $pag-item-background
-          color: $pag-item-color
-          text-decoration: none
+    &-disabled
+      background: $pag-disabled-background
+      color: $pag-disabled-color
+      cursor: auto
