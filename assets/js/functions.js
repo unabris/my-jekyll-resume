@@ -91,10 +91,21 @@ $(function() {
   }
 
   // Filter and paginate projects
-  filterAndPaginate($('.projects__container'), {
-    target: '.projects__card',
-    filter: '.projects__category',
-    pagination: '.projects__pagination'
+  var itemsPerPage = 6;
+
+  if ($(window).width() < 481) {
+    itemsPerPage = 3;
+  }
+
+  var mixer = mixitup('.projects__container', {
+    pagination: {
+      limit: itemsPerPage
+    },
+    templates: {
+      pager: '<div class="${classNames}" data-page="${pageNumber}">${pageNumber}</div>',
+      pagerPrev: '<div class="${classNames}" data-page="prev">❮</div>',
+      pagerNext: '<div class="${classNames}" data-page="next">❯</div>'
+    }
   });
 
   $('.projects__category').click(function() {
@@ -120,7 +131,6 @@ $(function() {
   });
 
   // Form
-
   $('#contact_form').submit(function(event) {
     event.preventDefault();
 
