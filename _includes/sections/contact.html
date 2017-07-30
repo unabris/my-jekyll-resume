@@ -53,6 +53,7 @@
             <input class="form__input" type="text" name="Name" placeholder="Name*" required />
             <input class="form__input" type="email" name="E-mail" placeholder="Email*" required />
             <textarea class="form__input" name="Message" placeholder="Message*" required></textarea>
+            <div class="form__captcha  g-recaptcha" data-sitekey="{{ site.recaptcha_key }}"></div>
             <input class="form__submit" type="submit" value="Send" />
           </form>
         </div>

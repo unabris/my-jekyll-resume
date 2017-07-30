@@ -91,10 +91,21 @@ $(function() {
   }
 
   // Filter and paginate projects
-  filterAndPaginate($('.projects__container'), {
-    target: '.projects__card',
-    filter: '.projects__category',
-    pagination: '.projects__pagination'
+  var itemsPerPage = 6;
+
+  if ($(window).width() < 481) {
+    itemsPerPage = 3;
+  }
+
+  var mixer = mixitup('.projects__container', {
+    pagination: {
+      limit: itemsPerPage
+    },
+    templates: {
+      pager: '<div class="${classNames}" data-page="${pageNumber}">${pageNumber}</div>',
+      pagerPrev: '<div class="${classNames}" data-page="prev">❮</div>',
+      pagerNext: '<div class="${classNames}" data-page="next">❯</div>'
+    }
   });
 
   $('.projects__category').click(function() {
@@ -120,16 +131,27 @@ $(function() {
   });
 
   // Form
-
   $('#contact_form').submit(function(event) {
     event.preventDefault();
 
-    var sendButton = $(this).siblings('input[type=submit]')
+    if(grecaptcha.getResponse() == "") {
+      alert('Are you a robot?');
+    } else {
+      submitForm(this);
+    }
+  });
+
+  $('#contact_form  .form__message').click(function() {
+    $(this).slideUp();
+  });
+
+  function submitForm(element) {
+    var sendButton = $(element).siblings('input[type=submit]');
 
     $.ajax({
-      url: $(this).attr('action'),
+      url: $(element).attr('action'),
       method: "POST",
-      data: $(this).serializeArray(),
+      data: $(element).serializeArray(),
       dataType: "json",
       beforeSend: function() {
         sendButton.prop('disabled', true);
@@ -145,16 +167,13 @@ $(function() {
         sendButton.prop('disabled', false);
       }
     });
-  });
-
-  $('#contact_form  .form__message').click(function() {
-    $(this).slideUp();
-  });
+  }
 
   function clearForm() {
     $('#contact_form input[type=text]').val('');
     $('#contact_form input[type=email]').val('');
     $('#contact_form textarea').val('');
+    grecaptcha.reset();
     // Remove yellow color from autocompleted input fields
     if (navigator.userAgent.toLowerCase().indexOf('chrome') >= 0) {
       $('input:-webkit-autofill').each(function() {
