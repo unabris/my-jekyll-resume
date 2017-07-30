@@ -1,4 +1,4 @@
-.prop('disabled', true);$(function() {
+$(function() {
   // Parallax backgrounds
   $('#header').parallax('50%', 0.1);
 
