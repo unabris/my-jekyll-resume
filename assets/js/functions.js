@@ -1,4 +1,4 @@
-$(function() {
+.prop('disabled', true);$(function() {
   // Parallax backgrounds
   $('#header').parallax('50%', 0.1);
 
@@ -173,6 +173,7 @@ $(function() {
     $('#contact_form input[type=text]').val('');
     $('#contact_form input[type=email]').val('');
     $('#contact_form textarea').val('');
+    grecaptcha.reset();
     // Remove yellow color from autocompleted input fields
     if (navigator.userAgent.toLowerCase().indexOf('chrome') >= 0) {
       $('input:-webkit-autofill').each(function() {
