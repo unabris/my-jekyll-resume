@@ -15,8 +15,8 @@ include:
 markdown: kramdown
 
 plugins:
-- neat
 - bourbon
+- neat
 
 exclude:
 - Gemfile
