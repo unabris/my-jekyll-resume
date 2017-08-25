@@ -9,3 +9,7 @@ gem 'jekyll-coffeescript'
 
 gem 'rake'
 gem 'html-proofer'
+
+# group :jekyll_plugins do
+#   gem 'jekyll-admin'
+# end
