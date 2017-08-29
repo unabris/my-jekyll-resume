@@ -1,6 +1,7 @@
 $(function() {
   // Parallax backgrounds
   $('#header').parallax('50%', 0.1);
+  $('#hobbies').parallax('50%', 0.1);
 
   // Load the navbar
   updateNavbarStyle();
@@ -56,7 +57,7 @@ $(function() {
       hideMobileNavigation();
 
       $('html,body').animate({
-        scrollTop: $(target).offset().top - navbar
+        scrollTop: $(target).offset().top - navbar + 1
       }, 1000);
       return false;
     }

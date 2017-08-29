@@ -20,7 +20,7 @@
           <ul>
             {% for contact in site.data.contact.contact %}
               <li class="contact__item">
-                <i class="fa  fa-{{ contact.icon }}"></i>
+                <i class="fa  {{ contact.icon }}"></i>
                 {% if contact.link %}
                   <a href="{{ contact.link }}">{{ contact.value }}</a>
                 {% else %}

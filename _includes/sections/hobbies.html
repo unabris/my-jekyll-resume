@@ -1,0 +1,19 @@
+<section class="section  section--no-padding" id="hobbies">
+  <div class="section-wraper">
+
+    <div class="title  title--white">
+      <h2 class="title__text">Hobbies &amp; Interests</h2>
+      <div class="title__line"></div>
+    </div>
+
+    <div class="hobbies">
+      {% for hobby in site.data.about-me.hobbies %}
+        <div class="hobby">
+          <i class="hobby__icon  fa  {{ hobby.icon }}" aria-hidden="true"></i>
+          <div class="hobby__title">{{ hobby.name }}</div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

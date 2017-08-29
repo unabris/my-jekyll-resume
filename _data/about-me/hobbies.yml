@@ -1,0 +1,14 @@
+- name: Games
+  icon: fa-gamepad
+
+- name: Coffee
+  icon: fa-coffee
+
+- name: Travel
+  icon: fa-plane
+
+- name: Coding
+  icon: fa-code
+
+- name: Photography
+  icon: fa-camera

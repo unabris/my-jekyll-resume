@@ -10,6 +10,8 @@ gem 'jekyll-coffeescript'
 gem 'rake'
 gem 'html-proofer'
 
+gem 'jekyll-twitter-plugin'
+
 # group :jekyll_plugins do
 #   gem 'jekyll-admin'
 # end

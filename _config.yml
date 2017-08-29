@@ -17,6 +17,7 @@ markdown: kramdown
 plugins:
 - bourbon
 - neat
+# - jekyll-twitter-plugin
 
 exclude:
 - Gemfile
